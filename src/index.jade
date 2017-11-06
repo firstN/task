@@ -1,0 +1,36 @@
+-
+	var jsLibs= {
+		'$' : "https://code.jquery.com/jquery-2.1.1.min.js",
+		'materialize.min.js' : "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js",	
+		react: 'https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js',
+		"react-dom": 'https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js',
+		'react-router-DOM': 'https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/4.2.2/react-router-dom.min.js',
+		'ee': 'https://cdnjs.cloudflare.com/ajax/libs/react-router/4.2.0/react-router.min.js'
+		
+	}
+	var cssLibs= {
+		normalize : 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css',
+		'Material+Icons' : "https://fonts.googleapis.com/icon?family=Material+Icons",
+		'materialize.min.css' : "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css",
+		"fonts-roboto" : "https://fonts.googleapis.com/css?family=Roboto"
+		
+	}
+
+html
+	head
+		if( jsLibs )
+			each lib,libName in jsLibs
+				script(src=lib)
+				//.
+					#{libName}
+		if( cssLibs )
+			each lib,libName in cssLibs
+				link(rel='stylesheet', href=lib)
+				//.
+					#{libName}
+		title Task
+		link( rel="shortcut icon" href="https://maxcdn.icons8.com/Share/icon/Alphabet//t1600.png" type="image/x-icon")
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	body#body
+		div#container
